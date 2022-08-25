@@ -11,7 +11,7 @@ def build_web_page(fotos):
    webpage = "<html> <head> </head> <body> <ul>"
    cont = 1
    for foto in fotos:
-       webpage = webpage + "<li> <img src =" + foto['img_src'] + "'></li>" 
+       webpage = webpage + "<li> <img src =" + foto['img_src'] + "></li>" 
        cont += 1
    print("Registros procesados:" )
    print( cont )
