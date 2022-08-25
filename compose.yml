@@ -1,0 +1,14 @@
+#Tarea Desafío 
+#Guido Vega
+services:
+
+  #Hello Curiosity, dame las fotos
+  uno:
+     tty: true
+     stdin_open: true
+     build: 
+       context: .
+       dockerfile: Dockerfile
+     volumes:
+       - .:/home
+     command: ./get-curious.py
