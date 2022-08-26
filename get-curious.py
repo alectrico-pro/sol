@@ -15,7 +15,7 @@ def build_web_page(fotos):
        cont += 1
    print("Registros procesados:" )
    print( cont )
-   webpage = webpage + "</ul> </body> </head> </html>"
+   webpage = webpage + "</ul> </body> </html>"
    return webpage
 
 response  =  requests.get( url, params=payload )
