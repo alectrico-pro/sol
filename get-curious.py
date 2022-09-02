@@ -2,9 +2,9 @@
 import sys, requests, json
 
 payload       =  {'api_key': 'MIcd7Mas45NENV8FutQaQdMFw4lXh7hk05acCsrV'}
-url           =  'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos'
-key           =  'latest_photos'
-max_reg       =  25
+url            =  'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos'
+key           =   'latest_photos'
+max_reg       =    25
 
 def build_web_page(fotos):
    #Construye un segmento html que muestra fotos
@@ -21,7 +21,7 @@ def build_web_page(fotos):
 response  =  requests.get( url, params=payload )
 
 if ( response.status_code == 200 ):
-    fotos = response.json()[key][1: max_reg]
+    fotos = response.json()[key][0: max_reg]
     html  = build_web_page(fotos)
     print( html )
     f     = open( 'index.html', 'w')
